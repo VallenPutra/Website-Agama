@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pengenalan Tajwid</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+        }
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 5px;
+            max-width: 600px;
+            margin: auto;
+        }
+        .tajwid {
+            margin-bottom: 15px;
+            padding: 10px;
+            background: #ecf0f1;
+            border-left: 5px solid #3498db;
+            cursor: pointer;
+        }
+        .tajwid h2 {
+            margin: 0;
+        }
+        .detail {
+            display: none;
+            padding: 10px;
+            background: #d5eaf5;
+            margin-top: 10px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Pengenalan Tajwid</h1>
+        <p>Ilmu Tajwid adalah ilmu yang mempelajari cara membaca Al-Qur'an dengan baik dan benar sesuai dengan aturan yang ditetapkan.</p>
+
+        <div class="tajwid" onclick="toggleDetail('idzhar')">
+            <h2>1. Idzhar Halqi</h2>
+            <div id="idzhar" class="detail">
+                <p>Idzhar berarti "jelas". Hukum ini terjadi ketika nun mati atau tanwin bertemu dengan huruf tenggorokan (*ع، غ، ح، خ، هـ، ء*).</p>
+                <p><strong>Contoh:</strong> <em>مِنْ غَفُورٍ رَحِيمٍ</em> (dibaca jelas tanpa dengung).</p>
+            </div>
+        </div>
+
+        <div class="tajwid" onclick="toggleDetail('idgham')">
+            <h2>2. Idgham Bighunnah</h2>
+            <div id="idgham" class="detail">
+                <p>Nun mati atau tanwin dilebur dengan dengung jika bertemu dengan *ي، ن، م، و*.</p>
+                <p><strong>Contoh:</strong> <em>مِنْ مَاءٍ</em> (dibaca dengan dengung).</p>
+            </div>
+        </div>
+
+        <div class="tajwid" onclick="toggleDetail('iqlab')">
+            <h2>3. Iqlab</h2>
+            <div id="iqlab" class="detail">
+                <p>Nun mati atau tanwin berubah menjadi bunyi *mim* jika bertemu dengan huruf *ب*.</p>
+                <p><strong>Contoh:</strong> <em>أَنْبِئْهُمْ</em> (dibaca dengan perubahan bunyi nun menjadi mim).</p>
+            </div>
+        </div>
+
+        <div class="tajwid" onclick="toggleDetail('ikhfa')">
+            <h2>4. Ikhfa Haqiqi</h2>
+            <div id="ikhfa" class="detail">
+                <p>Nun mati atau tanwin dibaca samar jika bertemu dengan huruf ikhfa seperti *ت، ث، ج، د، ذ، ز، س، ش، ص، ض، ط، ظ، ف، ق، ك*.</p>
+                <p><strong>Contoh:</strong> <em>مِنْكُمْ</em> (dibaca samar antara izhar dan idgham).</p>
+            </div>
+        </div>
+
+        <div class="tajwid" onclick="toggleDetail('mad')">
+            <h2>5. Mad</h2>
+            <div id="mad" class="detail">
+                <p>Mad adalah perpanjangan suara dalam bacaan Al-Qur'an. Contohnya adalah *Mad Wajib Muttasil*, *Mad Jaiz Munfasil*, dan *Mad Lazim*.</p>
+                <p><strong>Contoh:</strong> <em>وَلَا الضَّالِّينَ</em> (dibaca panjang).</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleDetail(id) {
+            var element = document.getElementById(id);
+            element.style.display = (element.style.display === "none" || element.style.display === "") ? "block" : "none";
+        }
+    </script>
+
+</body>
+</html>
